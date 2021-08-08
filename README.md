@@ -4,30 +4,58 @@
 **Version**: 1.0.0 
 
 ## Overview
-<!-- Provide a high level overview of what this application is and why you are building it, beyond the fact that it's an assignment for this class. (i.e. What's your problem domain?) -->
+The application retern the lon ,Lat, full city name and the map for the city name was entered
 
 ## Getting Started
-<!-- What are the steps that a user must take in order to build this app on their own machine and get it running? -->
+click to this link [here](https://renad-city-explorer.netlify.app)
 
 ## Architecture
-<!-- Provide a detailed description of the application design. What technologies (languages, libraries, etc) you're using, and any other relevant design information. -->
+- ReactJs
+- Bootstrap
+- LocationQI API 
 
-## Change Log
-<!-- Use this area to document the iterative changes made to your application as each feature is successfully implemented. Use time stamps. Here's an example:
+![location ](first.png)
 
-01-01-2001 4:59pm - Application now has a fully-functional express server, with a GET route for the location resource. -->
-
-## Credit and Collaborations
-<!-- Give credit (and a link) to other people or resources that helped you build this application. -->
-
+![map](map.png)
 ## Time Estimates
 
-Name of feature: ________________________________
+Name of feature: Set up your React repository & API keys.
 
-Estimate of time needed to complete: _____
+Estimate of time needed to complete: 30 min
 
-Start time: _____
+Start time: 2:00pm
 
-Finish time: _____
+Finish time: 2:20pm
 
-Actual time needed to complete: _____
+Actual time needed to complete: 20 min
+
+___
+Name of feature:  Locations.
+
+Estimate of time needed to complete: one hours
+
+Start time: 2:30pm
+
+Finish time: 4:20pm
+
+Actual time needed to complete: 2 hours and 50 min
+___
+Name of feature: Map.
+
+Estimate of time needed to complete: 30 min
+
+Start time: 4:30pm
+
+Finish time: 5:40pm
+
+Actual time needed to complete: one hour and 10 min
+___
+Name of feature: Errors.
+
+Estimate of time needed to complete: one hour
+
+Start time: 6:00pm
+
+Finish time: 6:40pm
+
+Actual time needed to complete: 40 min
