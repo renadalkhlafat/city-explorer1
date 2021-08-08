@@ -36,3 +36,17 @@
     transform: rotate(360deg);
   }
 }
+footer{
+  bottom: 0;
+  position: fixed;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  border-top:#6C757D solid 2px;
+  background: #6C757D;
+  color: #F8F9FA;
+  font-size: 18px;
+  width: 100%;
+  margin-top: 5px;
+}
+
