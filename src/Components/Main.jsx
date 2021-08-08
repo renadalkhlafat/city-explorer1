@@ -50,9 +50,8 @@ class Main extends Component {
                         </Alert>}
                     </Row>
                     <Row className="justify-content-center m-3">
-                        
-                        <Col  md="auto">
-                            <Card style={{width:'20rem'}} className='m-3'>
+                        <Col sm='6'>
+                            <Card  className='m-3'>
                                 <Card.Header>
                                     City Name :  {this.state.cityData.display_name}
                                 </Card.Header>
