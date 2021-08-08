@@ -41,20 +41,18 @@ class Main extends Component {
 
     render() {
         return (
-            <main style={{backgroundImage:'url(https://images.unsplash.com/photo-1523731407965-2430cd12f5e4?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=750&q=80)',backgroundSize: 'cover',
-            backgroundRepeat: 'no-repeat'}}>
+            <>
                 <Header handleSearch={this.handleSearch} />
                 <Container fluid>
                     <Row className="justify-content-center m-3">
                         {this.state.catchErr && <Alert  variant='secondary'>
-                           [{this.state.errMsg.response.status} | The location NOT FOUND]
+                           [{this.state.errMsg.response.status}] | The location NOT FOUND
                         </Alert>}
                     </Row>
-                    <Row>
-                        <Col>
-                        </Col>
-                        <Col>
-                            <Card className='m-3'>
+                    <Row className="justify-content-center m-3">
+                        
+                        <Col  md="auto">
+                            <Card style={{width:'20rem'}} className='m-3'>
                                 <Card.Header>
                                     City Name :  {this.state.cityData.display_name}
                                 </Card.Header>
@@ -71,11 +69,11 @@ class Main extends Component {
 
                             </Card>
                         </Col>
-                        <Col className='m-3'></Col>
+                       
                     </Row>
                     <Row></Row>
                 </Container>
-            </main>
+            </>
         );
     }
 }

@@ -5,8 +5,8 @@ import Footer from './Components/Footer';
 function App() {
   return (
     <>
-    <Main/>
-    <Footer/>
+      <Main />
+      <Footer />
     </>
   );
 }
