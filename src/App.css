@@ -42,11 +42,11 @@ footer{
   text-align: center;
   justify-content: center;
   align-items: center;
-  border-top:#6C757D solid 2px;
-  background: #6C757D;
+  border-top:#FFC107 solid 2px;
+  background: #FFC107;
   color: #F8F9FA;
   font-size: 18px;
   width: 100%;
-  margin-top: 5px;
+
 }
 

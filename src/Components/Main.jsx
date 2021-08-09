@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import axios from 'axios';
-import { Container, Col, Row, Card,Alert} from 'react-bootstrap';
-import Header from './Header';
+import { Container, Col, Row, Card, Alert } from 'react-bootstrap';
+import Weather from './Weather';
+import SearchForm from './Form';
 class Main extends Component {
     constructor() {
         super()
@@ -10,7 +11,7 @@ class Main extends Component {
             cityData: [],
             catchErr: false,
             errMsg: '',
-            showMap: false,
+            weatherData: [],
         }
     }
 
@@ -24,35 +25,56 @@ class Main extends Component {
         let url = `https://eu1.locationiq.com/v1/search.php?key=${process.env.REACT_APP_LOCATIONIQ_KEY}&q=${this.state.strQuery}&format=json`;
 
         try {
-            let locationData = await axios.get(url)
+            let locationData = await axios.get(url) 
             await this.setState({
                 cityData: locationData.data[0],
                 catchErr: false,
             });
+           this.getWeather(locationData.data[0].display_name)
             console.log(this.state.cityData);
         } catch (e) {
             await this.setState({
                 catchErr: true,
-                errMsg: e
+                errMsg: `${e.response.status} | The location NOT FOUND`,
             });
         }
-
     }
 
+    getWeather = async (city) => {
+        let cityName = city.split(',')[0];
+        let url = `${process.env.REACT_APP_LOCALHOST}/weather/${cityName}`;
+        console.log(url);
+        try {
+            let wData = await axios.get(url);
+
+            await this.setState({
+                weatherData: wData.data,
+            });
+            // console.log(this.state.weatherData);
+        } catch (error) {
+             this.setState({
+                errMsg: `${error.response.status} | The weather for given location NOT FOUND`,
+                catchErr: true,
+                weatherData: [],
+            });
+            // console.log(this.state.errMsg);
+        }
+    };
+    
     render() {
         return (
             <>
-                <Header handleSearch={this.handleSearch} />
+                <SearchForm handleSearch={this.handleSearch}/>
                 <Container fluid>
                     <Row className="justify-content-center m-3">
-                        {this.state.catchErr && <Alert  variant='secondary'>
-                           [{this.state.errMsg.response.status}] | The location NOT FOUND
+                        {this.state.catchErr && <Alert variant='warning'>
+                            {this.state.errMsg}
                         </Alert>}
                     </Row>
                     <Row className="justify-content-center m-3">
                         <Col sm='6'>
-                            <Card  className='m-3'>
-                                <Card.Header>
+                            <Card className='m-3'>
+                                <Card.Header style={{background:'#FFC107'}}>
                                     City Name :  {this.state.cityData.display_name}
                                 </Card.Header>
                                 <Card.Body>
@@ -68,9 +90,19 @@ class Main extends Component {
 
                             </Card>
                         </Col>
-                       
+
                     </Row>
-                    <Row></Row>
+                    <Row style={{paddingBottom:'40px'}}>
+                        {this.state.weatherData &&
+                        <>
+                        {this.state.weatherData.map((element,index)=>
+                        <Weather
+                        key={index}
+                        date ={element.date}
+                        description ={element.description}
+                        />)}
+                        </>}
+                    </Row>
                 </Container>
             </>
         );
