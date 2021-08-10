@@ -1,10 +1,10 @@
 # Project Name
 
 **Author**: Renad Al-khlafat
-**Version**: 2.0.0 
+**Version**: 3.0.0 
 
 ## Overview
-The application retern the lon ,Lat, full city name and the map for the city name was entered
+visit this link [here](https://renad-city-explorer.netlify.app)
 
 ## Getting Started
 clone this repo and the city-explorer-api to your local machine and run the npm start command
@@ -13,15 +13,14 @@ clone this repo and the city-explorer-api to your local machine and run the npm 
 - ReactJs
 - Bootstrap
 - LocationQI API 
-- ReST API 
+- ReST API
+- weather API
+- moviedb API 
 
-![location ](first.png)
-
-![map](map.png)
 
 ## Time Estimates
 
-Name of feature: Set up city-explorer-api repository.
+Name of feature: weather (live).
 
 Estimate of time needed to complete: one hour
 
@@ -31,7 +30,7 @@ Finish time: 2:40pm
 
 Actual time needed to complete: 40 min
 ___
-Name of feature: Weather (front-end & back-end).
+Name of feature: movies.
 
 Estimate of time needed to complete: 2 hour
 
