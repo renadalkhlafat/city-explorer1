@@ -7,7 +7,7 @@ class Movie extends Component {
         return ( 
             <Col >
             <Card >
-                <Card.Header style={{background:'#FFC107'}}>
+                <Card.Header style={{background:'#FFC107'}} >
                    <h5> {this.props.released_on}</h5>
                 </Card.Header>
                 

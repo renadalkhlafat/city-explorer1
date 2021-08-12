@@ -20,32 +20,22 @@ clone this repo and the city-explorer-api to your local machine and run the npm 
 
 ## Time Estimates
 
-Name of feature: weather (live).
+Name of feature: Caching weather.
 
 Estimate of time needed to complete: one hour
 
 Start time: 2:00pm
 
-Finish time: 2:40pm
+Finish time: 3:10pm
 
-Actual time needed to complete: 40 min
+Actual time needed to complete: one hour and 10 min
 ___
-Name of feature: movies.
-
-Estimate of time needed to complete: 2 hour
-
-Start time: 3:00pm
-
-Finish time: 6:30pm
-
-Actual time needed to complete: 3 hours and a half
-___
-Name of feature: Errors.
+Name of feature: Caching  Movies.
 
 Estimate of time needed to complete: one hour
 
-Start time: 6:30pm
+Start time: 3:20pm
 
-Finish time: 7:00pm
+Finish time: 4:40pm
 
-Actual time needed to complete: 30 min
+Actual time needed to complete: one hour and 20 min
