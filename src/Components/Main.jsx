@@ -3,7 +3,7 @@ import axios from 'axios';
 import { Container, Col, Row, Card, Alert } from 'react-bootstrap';
 import Weather from './Weather';
 import SearchForm from './Form';
-import Movie from './Movie';
+import Movies from './Movies';
 class Main extends Component {
     constructor() {
         super()
@@ -141,7 +141,7 @@ class Main extends Component {
                     <>
                         {this.state.moviesData &&
                             <>
-                                {this.state.moviesData.map((element, index) => <Movie
+                                {this.state.moviesData.map((element, index) => <Movies
                                     key={index}
                                     released_on={element.released_on}
                                     title={element.title}
