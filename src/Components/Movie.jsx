@@ -1,11 +1,10 @@
 import React, { Component } from 'react'
-import { Card,Col } from 'react-bootstrap';
+import { Card } from 'react-bootstrap';
 
 class Movie extends Component {
     
     render() { 
         return ( 
-            <Col >
             <Card >
                 <Card.Header style={{background:'#FFC107'}} >
                    <h5> {this.props.released_on}</h5>
@@ -29,7 +28,6 @@ class Movie extends Component {
                     
                 </Card.Footer>
             </Card>
-            </Col>
          );
     }
 }
